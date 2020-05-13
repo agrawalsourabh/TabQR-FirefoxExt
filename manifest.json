@@ -1,0 +1,16 @@
+{
+    "name": "TabQR",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "icons": { "128": "/icons/Extension-Icon_128.png" },
+    "permissions": ["activeTab"],
+    "browser_action": {
+        "default_icon": "/icons/Extension-Icon_128.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://www.google.com/*"],
+        "js": ["qrcode.js", "popup.js"]
+    }],
+    "manifest_version": 2
+}
